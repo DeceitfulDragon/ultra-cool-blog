@@ -1,3 +1,4 @@
+// Handle form for creating a new post
 const newFormHandler = async (event) => {
     event.preventDefault();
 
@@ -19,6 +20,7 @@ const newFormHandler = async (event) => {
     }
 };
 
+// Toggle visibility of the edit form
 const editPostHandler = (event) => {
     const id = event.target.getAttribute('data-id');
     const editForm = document.querySelector(`#edit-form-${id}`);
@@ -33,6 +35,7 @@ const editPostHandler = (event) => {
     }
 };
 
+// Handle the form for saving an edited post
 const savePostHandler = async (event) => {
     event.preventDefault();
 
@@ -55,6 +58,7 @@ const savePostHandler = async (event) => {
     }
 };
 
+// Handle the deletion of a post
 const deletePostHandler = async (event) => {
     const id = event.target.getAttribute('data-id');
 
@@ -70,6 +74,7 @@ const deletePostHandler = async (event) => {
     }
 };
 
+// Send to the post page when a post card is clicked
 const navigateToPost = (event) => {
     const target = event.target.closest('.post-card');
     if (target && !event.target.classList.contains('edit-post-btn') && !event.target.classList.contains('delete-post-btn') && !event.target.closest('.edit-form')) {
@@ -82,6 +87,7 @@ const stopPropagation = (event) => {
     event.stopPropagation();
 };
 
+// Adding all the event listeners we need
 document.addEventListener('DOMContentLoaded', () => {
     const newPostForm = document.querySelector('.new-post-form');
     const editPostButtons = document.querySelectorAll('.edit-post-btn');
@@ -117,6 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Toggle visibility of new post form
     document.querySelector('#new-post-btn').addEventListener('click', () => {
         const newPostForm = document.querySelector('#new-post-form');
         if (newPostForm.style.display === 'none' || newPostForm.style.display === '') {

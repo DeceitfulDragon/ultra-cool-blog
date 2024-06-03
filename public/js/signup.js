@@ -1,3 +1,4 @@
+// Signup handler using the form in signup.handlebars
 const signupFormHandler = async (event) => {
     event.preventDefault();
 
