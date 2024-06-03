@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+header nav button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    border-bottom: 2px solid #444;
+    margin-bottom: 10px;
+}
+
+.post-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.post-card {
+    background: #2a2a2a;
+    border-radius: 5px;
+    padding: 20px;
+    width: calc(33% - 40px);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.post-card:hover {
+    transform: scale(1.05);
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-icon {
+    display: flex;
+    align-items: center;
+}
+
+.comment-icon i {
+    margin-right: 5px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+form {
+    margin: 20px 0;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #333;
+    color: #f0f0f0;
+}
+
+form button {
+    background: #3a9d23;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #2f7e1a;
+}
+
+.comment-card {
+    background: #2a2a2a;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.edit-post-btn,
+.delete-post-btn,
+.save-post-btn {
+    background: #444;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.edit-post-btn:hover,
+.delete-post-btn:hover,
+.save-post-btn:hover {
+    background: #555;
+}
+
+.edit-form {
+    margin-top: 10px;
+    background: #2a2a2a;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#new-post-form {
+    background: #2a2a2a;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
