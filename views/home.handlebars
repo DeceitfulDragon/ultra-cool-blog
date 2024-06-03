@@ -1,0 +1,14 @@
+<div class="post-container">
+    {{#each posts}}
+        <div class="post-card" data-id="{{this.id}}">
+            <h2>{{this.title}}</h2>
+            <p>by {{this.user.username}} on {{format_date this.createdAt}}</p>
+            <p>{{this.content}}</p>
+            <div class="post-footer">
+                <span class="comment-icon">
+                    <i class="fas fa-comments"></i> {{this.comments.length}}
+                </span>
+            </div>
+        </div>
+    {{/each}}
+</div>
